@@ -45,6 +45,4 @@ it('should return string values', () => {
   expect(typeof op.operand1).toEqual('string')
 });
 
-it.skip('should calculate decimals', () => {
-  
-});
+// it should calculate decimals

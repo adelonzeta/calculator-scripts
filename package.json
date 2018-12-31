@@ -1,7 +1,7 @@
 {
-  "name": "scientific-calculator",
+  "name": "calculator-keys",
   "version": "0.0.1-2",
-  "description": "Scientific Calculator Javascript Library.",
+  "description": "Calculator Keys Javascript Library.",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {

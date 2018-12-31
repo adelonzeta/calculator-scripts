@@ -1,7 +1,7 @@
-# Scientific Calculator
+# Calculator Keys
 Add to any frontend framework.
 
 ## Installation
 ```shell
-$ npm i --save scientific-calculator
+$ npm i --save calculator-keys
 ```

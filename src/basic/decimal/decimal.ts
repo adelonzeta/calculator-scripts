@@ -1,26 +1,21 @@
 import {State} from '../../types'
 
-export function decimal(period: string, {operand1, operand2, operator}: State): State {
-  let numberOne = operand1
-  let numberTwo = operand2
-  
-  if (operator) {
-    if (operand2) {
-      if (numberTwo.indexOf(period) === -1) numberTwo += period
-    } else {
-      numberTwo = '0' + period
-    }
-  } else {
-    if (operand1) {
-      if (numberOne.indexOf(period) === -1) numberOne += period
-    } else {
-      numberOne = '0' + period
-    }
-  }
+export function decimal(state: State): State {  
+  let operand1  = state.operand1
+  let operand2  = state.operand2
+  let operator  = state.operator
+  const period  = '.'
+  const operand = operator ? operand2 : operand1
+  const decimal = operand.indexOf(period) !== -1
 
-  return {
-    operand1: numberOne,
-    operand2: numberTwo,
-    operator: operator
-  }
+  if (operator && operand2 && !decimal)
+    operand2 += period
+  if (operator && !operand2 && !decimal)
+    operand2 = '0' + period
+  if (!operator && operand1 && !decimal)
+    operand1 += period
+  if (!operator && !operand1 && !decimal)
+    operand1 = '0' + period
+
+  return {operand1, operand2, operator}
 }

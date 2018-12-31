@@ -2,7 +2,7 @@ import {decimal} from './decimal'
 import {state} from '../../utilities'
 
 describe('decimal function', () => {
-  describe('when operand is a null string', () => {
+  describe('when operand is an empty string', () => {
     it('should append zero and decimal point', () => {
       expect(decimal(state('', '', ''))).toEqual(state('0.', '', ''))
       expect(decimal(state('1', '', 'ADD'))).toEqual(state('1', '0.', 'ADD'))

@@ -1,4 +1,4 @@
-import {State} from '../types'
+import {State} from '../../types'
 
 export function number(number: number, state: State): State {
   let numberString = String(number)

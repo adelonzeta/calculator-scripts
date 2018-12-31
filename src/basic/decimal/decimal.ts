@@ -1,4 +1,4 @@
-import {State} from '../types'
+import {State} from '../../types'
 
 export function decimal(period: string, {operand1, operand2, operator}: State): State {
   let numberOne = operand1

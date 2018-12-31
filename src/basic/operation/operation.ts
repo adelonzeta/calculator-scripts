@@ -1,4 +1,4 @@
-import {State} from '../types'
+import {State} from '../../types'
 
 export function operation(operator: string, state: State): State {
   const number1 = Number(state.operand1)

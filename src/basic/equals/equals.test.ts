@@ -1,5 +1,5 @@
 import {equals} from './equals'
-import {state} from '../utilities'
+import {state} from '../../utilities'
 
 describe('equals function', () => {
   describe('with operator', () => {

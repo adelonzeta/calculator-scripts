@@ -1,4 +1,4 @@
-import {State} from '../types'
+import {State} from '../../types'
 
 export function toggleSign(state: State): State {
   let numberOne: string | number = state.operand1

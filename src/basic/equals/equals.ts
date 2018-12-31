@@ -1,5 +1,5 @@
-import {calculate} from '../utilities'
-import {State} from '../types'
+import {calculate} from '../../utilities'
+import {State} from '../../types'
 
 export function equals(state: State): State {
   let operand1 = state.operand1

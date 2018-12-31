@@ -2,12 +2,16 @@
   "name": "scientific-calculator",
   "version": "0.0.1-1",
   "description": "Scientific Calculator Javascript Library.",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
     "test": "jest --watch"
   },
+  "files": [
+    "lib"
+  ],
   "jest": {
     "moduleFileExtensions": [
       "ts",

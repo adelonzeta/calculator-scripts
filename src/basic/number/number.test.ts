@@ -1,30 +1,41 @@
 import {number} from './number'
+import {state} from '../../utilities'
 
-// should work without operator
-// should work with operator
-// should work with existing value
+describe('number function', () => {
+  describe('operand is an empty string and number is zero', () => {
+    it('should return the same state', () => {
+      expect(number('0', state('', '', ''))).toEqual(state('', '', ''))
+      expect(number('0', state('1', '', 'ADD'))).toEqual(state('1', '', 'ADD'))
+    });
+  });
+  describe('operand is an empty string and number is not zero', () => {
+    it('should append the number', () => {
+      expect(number('1', state('', '', ''))).toEqual(state('1', '', ''))
+      expect(number('1', state('1', '', 'ADD'))).toEqual(state('1', '1', 'ADD'))
+    });
+  });
 
-function state(o1: string, o2: string, o: string) {
-  return {operand1: o1, operand2: o2, operator: o}
-}
+  describe('operand is zero and number is zero', () => {
+    it('should replace with an empty string', () => {
+      expect(number('0', state('0', '', ''))).toEqual(state('', '', ''))
+      expect(number('0', state('1', '0', 'ADD'))).toEqual(state('1', '', 'ADD'))
+    });
+  });
+  describe('operand is zero and number is not zero', () => {
+    it('should replace with the number', () => {
+      expect(number('1', state('0', '', ''))).toEqual(state('1', '', ''))
+      expect(number('1', state('1', '0', 'ADD'))).toEqual(state('1', '1', 'ADD'))
+    });
+  });
 
-it('should always save a string value', () => {
-  let sampleInput = number(1, state('2', '', ''))
-  expect(typeof sampleInput.operand1).toEqual('string')
-})
-
-it('should work without operator', () => {
-  expect(number(1, state('', '', ''))).toEqual(state('1', '', ''))
-  expect(number(7, state('', '', ''))).toEqual(state('7', '', ''))
-});
-
-it('should work with operator', () => {
-  expect(number(1, state('', '', 'ADD'))).toEqual(state('', '1', 'ADD'))
-  expect(number(9, state('1', '', 'ADD'))).toEqual(state('1', '9', 'ADD'))
-});
-
-it('should work with existing value', () => {
-  expect(number(1, state('1', '', ''))).toEqual(state('11', '', ''))
-  expect(number(9, state('', '1', 'ADD'))).toEqual(state('', '19', 'ADD'))
-  expect(number(9, state('1', '1', 'ADD'))).toEqual(state('1', '19', 'ADD'))
+  describe('operand is a number greater than zero', () => {
+    it('should append the number', () => {
+      expect(number('1', state('0.01', '', ''))).toEqual(state('0.011', '', ''))
+      expect(number('1', state('0.', '', ''))).toEqual(state('0.1', '', ''))
+      expect(number('1', state('1', '', ''))).toEqual(state('11', '', ''))
+      expect(number('1', state('1', '1.1', 'ADD'))).toEqual(state('1', '1.11', 'ADD'))
+      expect(number('1', state('1', '1.', 'ADD'))).toEqual(state('1', '1.1', 'ADD'))
+      expect(number('1', state('1', '2', 'ADD'))).toEqual(state('1', '21', 'ADD'))
+    });
+  });
 });

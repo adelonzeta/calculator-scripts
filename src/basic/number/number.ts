@@ -1,27 +1,27 @@
 import {State} from '../../types'
 
-export function number(number: number, state: State): State {
-  let numberString = String(number)
-  let numberOne = state.operand1
-  let numberTwo = state.operand2
-  
-  if (state.operator) {
-    if (state.operand2) {
-      numberTwo = state.operand2 === '0' ? numberString : state.operand2 + numberString
-    } else {
-      numberTwo = numberString
-    }
-  } else {
-    if (state.operand1) {
-      numberOne = state.operand1 + numberString
-    } else {
-      numberOne = number === 0 ? '' : numberString
-    }
-  }
+export function number(number: string, state: State): State {
+  let operand1 = state.operand1
+  let operand2 = state.operand2
+  let operator = state.operator
+  const operand = operator ? operand2 : operand1
 
-  return {
-    operand1: numberOne,
-    operand2: numberTwo,
-    operator: state.operator
-  }
+  if (operator && operand === '' && number !== '0')
+    operand2 += number
+  if (!operator && operand === '' && number !== '0')
+    operand1 += number
+  if (operator && operand === '0' && number === '0')
+    operand2 = ''
+  if (!operator && operand === '0' && number === '0')
+    operand1 = ''
+  if (operator && operand === '0' && number !== '0')
+    operand2 = number
+  if (!operator && operand === '0' && number !== '0')
+    operand1 = number
+  if (operator && operand > '0')
+    operand2 += number
+  if (!operator && operand > '0')
+    operand1 += number
+
+  return {operand1, operand2, operator}
 }

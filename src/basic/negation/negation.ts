@@ -1,6 +1,6 @@
 import {State} from '../../types'
 
-export function toggleSign(state: State): State {
+export function negation(state: State): State {
   let numberOne: string | number = state.operand1
   let numberTwo: string | number = state.operand2
 

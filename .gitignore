@@ -12,3 +12,8 @@ npm-debug.log*
 node_modules
 lib
 coverage
+basic
+types
+utilities
+index.d.ts
+index.js

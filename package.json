@@ -8,6 +8,7 @@
     "prepare": "npm run build",
     "build": "tsc",
     "test": "jest --watch",
+    "test-once": "jest",
     "test-coverage": "jest --coverage"
   },
   "files": [

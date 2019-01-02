@@ -1,20 +1,14 @@
 import {State} from '../../types'
 
 export function negation(state: State): State {
-  let numberOne: string | number = state.operand1
-  let numberTwo: string | number = state.operand2
+  let operand1 = state.operand1
+  let operand2 = state.operand2
+  let operator = state.operator
 
-  if (state.operator && state.operand2) {
-    numberTwo = Number(state.operand2) * (-1)
-    numberTwo = numberTwo.toString()
-  } else {
-    numberOne = Number(state.operand1) * (-1)
-    numberOne = numberOne.toString()
-  }
+  if (operator && operand2)
+    operand2 = String(Number(operand2) * (-1))
+  else
+    operand1 = String(Number(operand1) * (-1))
     
-  return {
-    operand1: numberOne,
-    operand2: numberTwo,
-    operator: state.operator
-  }
+  return {operand1, operand2, operator}
 }

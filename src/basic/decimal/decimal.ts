@@ -14,14 +14,10 @@ export function decimal(state: State): State {
   let operator  = state.operator
   let notDecimal = !isDecimal(operand(state))
 
-  if (operator && operand2 && notDecimal)
-    operand2 += '.'
-  if (operator && !operand2 && notDecimal)
-    operand2 = '0' + '.'
-  if (!operator && operand1 && notDecimal)
-    operand1 += '.'
-  if (!operator && !operand1 && notDecimal)
-    operand1 = '0' + '.'
+  if (operator && notDecimal)
+    operand2 = operand2 ? operand2 + '.' : '0.'
+  if (!operator && notDecimal)
+    operand1 = operand1 ? operand1 + '.' : '0.'
 
   return {operand1, operand2, operator}
 }

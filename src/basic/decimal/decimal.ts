@@ -8,6 +8,10 @@ function isDecimal(operand: string): boolean {
   return operand.indexOf('.') !== -1
 }
 
+function newOperand(operand: string): string {
+  return operand ? operand + '.' : '0.'
+}
+
 export function decimal(state: State): State {  
   let operand1  = state.operand1
   let operand2  = state.operand2
@@ -15,9 +19,9 @@ export function decimal(state: State): State {
   let notDecimal = !isDecimal(operand(state))
 
   if (operator && notDecimal)
-    operand2 = operand2 ? operand2 + '.' : '0.'
+    operand2 = newOperand(operand2)
   if (!operator && notDecimal)
-    operand1 = operand1 ? operand1 + '.' : '0.'
+    operand1 = newOperand(operand1)
 
   return {operand1, operand2, operator}
 }

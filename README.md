@@ -15,10 +15,9 @@
   <img src="https://img.shields.io/codeclimate/coverage/adelonzeta/calculator-keys.svg" alt="Test Coverage" />
 </a>
 <br/><br/>
-Just add sugar Javascript library.
+Just-add-sugar calculator functions.
 </p>
 <br/><br/>
-
 
 ## Installation
 ```shell
@@ -27,8 +26,14 @@ $ npm i --save calculator-keys
 
 ## Usage
 ```javascript
-import * as _ from 'calculator-keys'
-
-// try using more sensible names
-// like 'keys' or 'buttons'
+import * as Keys from 'calculator-keys'
 ```
+
+## Basic Functions
+* [`clear`](#clear)
+* [`decimal`](#decimal)
+* [`equals`](#equals)
+* [`negation`](#negation)
+* [`number`](#number)
+* [`operation`](#operation)
+* [`percent`](#percent)

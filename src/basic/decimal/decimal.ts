@@ -12,19 +12,17 @@ export function decimal(state: State): State {
   let operand1  = state.operand1
   let operand2  = state.operand2
   let operator  = state.operator
-  const period  = '.'
-  // const operand = operator ? operand2 : operand1
-  // const decimal = operand(state).indexOf(period) !== -1
-  const decimal= isDecimal(operand(state))
 
-  if (operator && operand2 && !decimal)
-    operand2 += period
-  if (operator && !operand2 && !decimal)
-    operand2 = '0' + period
-  if (!operator && operand1 && !decimal)
-    operand1 += period
-  if (!operator && !operand1 && !decimal)
-    operand1 = '0' + period
+  if (!isDecimal(operand(state))) {
+    if (operator && operand2)
+      operand2 += '.'
+    if (operator && !operand2)
+      operand2 = '0' + '.'
+    if (!operator && operand1)
+      operand1 += '.'
+    if (!operator && !operand1)
+      operand1 = '0' + '.'
+  }
 
   return {operand1, operand2, operator}
 }

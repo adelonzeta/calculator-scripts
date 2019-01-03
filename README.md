@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/adelonzeta/calculator-keys/master/logo.png" alt="Calculator Keys" />
 <br/><br/>
 <a href="https://www.npmjs.com/package/calculator-keys">
-  <img src="https://img.shields.io/npm/v/calculator-keys.svg" alt="npm" />
+  <img src="https://img.shields.io/npm/v/calculator-keys.svg?colorB=4CC61E" alt="npm" />
 </a>
 <a href="https://travis-ci.org/adelonzeta/calculator-keys">
   <img src="https://img.shields.io/travis/adelonzeta/calculator-keys.svg" alt="build" />

@@ -20,16 +20,16 @@ Just-add-sugar calculator functions.
 <br/><br/>
 
 ## Installation
+Using npm:
 ```shell
 $ npm i --save calculator-keys
 ```
-
-## Usage
+In your frontend project:
 ```javascript
-import * as Keys from 'calculator-keys'
+import * as keys from 'calculator-keys'
 ```
 
-## Basic Functions
+## Basic Key Functions
 * [`clear`](#clear)
 * [`decimal`](#decimal)
 * [`equals`](#equals)
@@ -37,3 +37,18 @@ import * as Keys from 'calculator-keys'
 * [`number`](#number)
 * [`operation`](#operation)
 * [`percent`](#percent)
+
+## Clear
+Clears the state properties.
+```javascript
+keys.clear()
+```
+
+### Returns
+(object): Returns the state object with empty string properties.
+
+### Example
+```javascript
+keys.clear()
+// => {operand1: '', operand2: '', operator: ''}
+```

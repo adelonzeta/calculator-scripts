@@ -52,3 +52,26 @@ keys.clear()
 keys.clear()
 // => {operand1: '', operand2: '', operator: ''}
 ```
+
+## Decimal
+Converts operands into a decimal number.
+```javascript
+keys.decimal({operand1, operand2, operator})
+```
+
+### Arguments
+{operand1} (string): First operand. <br>
+{operand2} (string): Second operand. <br>
+{operator} (string): Operation to perform.
+
+### Returns
+(object): Returns a new state object.
+
+### Example
+```javascript
+keys.decimal({operand1: '1', operand2: '', operator: ''})
+// => {operand1: '1.', operand2: '', operator: ''}
+
+keys.decimal({operand1: '1', operand2: '1', operator: 'ADD'})
+// => {operand1: '1', operand2: '1.', 'ADD'}
+```

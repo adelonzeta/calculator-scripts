@@ -1,6 +1,6 @@
 {
   "name": "calculator-keys",
-  "version": "0.0.1-3",
+  "version": "1.0.0",
   "description": "Calculator Keys Javascript Library.",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",

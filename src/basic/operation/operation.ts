@@ -1,4 +1,4 @@
-import {State} from '../../types'
+import {State}     from '../../types'
 import {calculate} from '../../utilities'
 
 export function operation(newOperator: string, state: State): State {

@@ -1,9 +1,21 @@
 {
-  "name": "calculator-keys",
+  "name": "calculator-scripts",
   "version": "1.0.0",
-  "description": "Calculator Keys Javascript Library.",
+  "description": "Calculator Javascript Library.",
+  "author": "Adelon Zeta <hello@adelonzeta.com>",
+  "repository": "git+https://github.com/adelonzeta/calculator-scripts.git",
+  "bugs": "https://github.com/adelonzeta/calculator-scripts/issues",
+  "homepage": "https://github.com/adelonzeta/calculator-scripts#readme",
+  "license": "ISC",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
+  "keywords": [
+    "scientific",
+    "calculator",
+    "typescript",
+    "javascript",
+    "library"
+  ],
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
@@ -24,23 +36,6 @@
     },
     "testRegex": "/src/.*\\.test\\.ts$"
   },
-  "keywords": [
-    "scientific",
-    "calculator",
-    "typescript",
-    "javascript",
-    "library"
-  ],
-  "author": "Adelon Zeta <hello@adelonzeta.com>",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adelonzeta/scientific-calculator.git"
-  },
-  "bugs": {
-    "url": "https://github.com/adelonzeta/scientific-calculator/issues"
-  },
-  "homepage": "https://github.com/adelonzeta/scientific-calculator#readme",
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "jest": "^23.6.0",

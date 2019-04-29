@@ -1,16 +1,16 @@
 <h1 align="center">Calculator Scripts</h1>
 <p align="center">
-<a href="https://www.npmjs.com/package/calculator-keys">
-  <img src="https://img.shields.io/npm/v/calculator-keys.svg?colorB=4CC61E" alt="npm" />
+<a href="https://www.npmjs.com/package/calculator-scripts">
+  <img src="https://img.shields.io/npm/v/calculator-scripts.svg?colorB=4CC61E" alt="npm" />
 </a>
-<a href="https://travis-ci.org/adelonzeta/calculator-keys">
-  <img src="https://img.shields.io/travis/adelonzeta/calculator-keys.svg" alt="build" />
+<a href="https://travis-ci.org/adelonzeta/calculator-scripts">
+  <img src="https://img.shields.io/travis/adelonzeta/calculator-scripts.svg" alt="build" />
 </a>
-<a href="https://codeclimate.com/github/adelonzeta/calculator-keys/maintainability">
-  <img src="https://img.shields.io/codeclimate/maintainability/adelonzeta/calculator-keys.svg" alt="Maintainability" />
+<a href="https://codeclimate.com/github/adelonzeta/calculator-scripts/maintainability">
+  <img src="https://img.shields.io/codeclimate/maintainability/adelonzeta/calculator-scripts.svg" alt="Maintainability" />
 </a>
-<a href="https://codeclimate.com/github/adelonzeta/calculator-keys/test_coverage">
-  <img src="https://img.shields.io/codeclimate/coverage/adelonzeta/calculator-keys.svg" alt="Test Coverage" />
+<a href="https://codeclimate.com/github/adelonzeta/calculator-scripts/test_coverage">
+  <img src="https://img.shields.io/codeclimate/coverage/adelonzeta/calculator-scripts.svg" alt="Test Coverage" />
 </a>
 <br/><br/>
 Just-add-sugar calculator functions.

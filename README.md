@@ -1,7 +1,10 @@
+<h1 style="text-align: center; text-transform: uppercase;">Calculator Scripts</h1>
 <p align="center">
+<!--
 <br/><br/>
 <img src="https://raw.githubusercontent.com/adelonzeta/calculator-keys/master/logo.png" alt="Calculator Keys" />
 <br/><br/>
+-->
 <a href="https://www.npmjs.com/package/calculator-keys">
   <img src="https://img.shields.io/npm/v/calculator-keys.svg?colorB=4CC61E" alt="npm" />
 </a>
@@ -22,11 +25,11 @@ Just-add-sugar calculator functions.
 ## Installation
 Using npm:
 ```shell
-$ npm i --save calculator-keys
+$ npm i --save calculator-scripts
 ```
 In your frontend project:
 ```javascript
-import * as keys from 'calculator-keys'
+import * as keys from 'calculator-scripts'
 ```
 
 <br>

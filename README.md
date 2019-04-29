@@ -1,10 +1,5 @@
-<h1 style="text-align: center; text-transform: uppercase;">Calculator Scripts</h1>
+<h1 align="center">Calculator Scripts</h1>
 <p align="center">
-<!--
-<br/><br/>
-<img src="https://raw.githubusercontent.com/adelonzeta/calculator-keys/master/logo.png" alt="Calculator Keys" />
-<br/><br/>
--->
 <a href="https://www.npmjs.com/package/calculator-keys">
   <img src="https://img.shields.io/npm/v/calculator-keys.svg?colorB=4CC61E" alt="npm" />
 </a>

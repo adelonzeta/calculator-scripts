@@ -33,10 +33,9 @@ describe('operation function', () => {
 
   describe('has no operands', () => {
     it('should return an empty string', () => {
-      expect(operation('ADD', setState('', '', ''))).toEqual(setState('', '', ''))
-      expect(operation('SUBTRACT', setState('', '', ''))).toEqual(setState('', '', ''))
-      expect(operation('MULTIPLY', setState('', '', ''))).toEqual(setState('', '', ''))
-      expect(operation('DIVIDE', setState('', '', ''))).toEqual(setState('', '', ''))
-    });  
+      ['ADD', 'SUBTRACT', 'MULTIPLY', 'DIVIDE'].forEach(operand => {
+        expect(operation(operand, setState('', '', ''))).toEqual(setState('', '', ''))
+      })
+    });
   });
 });
